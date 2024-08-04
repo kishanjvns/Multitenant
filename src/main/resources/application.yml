@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Multitenant
+multitenancy:
+    http:
+      tenantHeaderName: X-TenantId
