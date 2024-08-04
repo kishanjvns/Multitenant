@@ -1,4 +1,4 @@
-package com.tech.kj;
+package com.tech.kj.config;
 
 import org.springframework.lang.NonNull;
 

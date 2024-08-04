@@ -1,4 +1,4 @@
-package com.tech.kj;
+package com.tech.kj.config;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Component;

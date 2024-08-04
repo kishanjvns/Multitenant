@@ -1,4 +1,4 @@
-package com.tech.kj;
+package com.tech.kj.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
