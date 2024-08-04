@@ -1,6 +1,15 @@
 spring:
   application:
     name: Multitenant
+  jpa:
+    hibernate:
+      ddl-auto: update
+  #datasource:
+    #username:
+    #password:
+    #url:
+    #driver-class-name:
+# since we are using the Test Containers as maven dependency we can skip above db config
 multitenancy:
     http:
       tenantHeaderName: X-TenantId
