@@ -13,4 +13,22 @@ public class TenantController {
         System.out.println("test "+ TenantContext.getTenantId());
         return TenantContext.getTenantId();
     }
+    @GetMapping("/system-info")
+    public Map<String, String> getSystemInfo() throws UnknownHostException {
+        Map<String, String> systemInfo = new HashMap<>();
+
+        InetAddress localHost = InetAddress.getLocalHost();
+        String ipAddress = localHost.getHostAddress();
+        String hostName = localHost.getHostName();
+
+        systemInfo.put("IP Address", ipAddress);
+        systemInfo.put("Host Name", hostName);
+        systemInfo.put("Canonical Host Name", localHost.getCanonicalHostName());
+        systemInfo.put("Operating System", System.getProperty("os.name"));
+        systemInfo.put("OS Version", System.getProperty("os.version"));
+        systemInfo.put("OS Architecture", System.getProperty("os.arch"));
+        systemInfo.put("User", System.getProperty("user.name"));
+
+        return systemInfo;
+    }
 }
